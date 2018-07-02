@@ -22,8 +22,14 @@
   font-size: large;
 }
 
+.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .poster {
-  float: left;
-  min-width: 33%;
-  height: 20%;
+  justify-content: center;
+  margin: 30px;
+  width: 33%;
+  flex: 1;
 }

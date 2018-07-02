@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
-import Inception from './Images/inception.jpg';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         
-        <img src={Inception} alt="Inception Poster" className="poster" />
+        <div className="container">
+          <h1 className="poster">Black Mirror</h1>
+          <h1 className="poster">Breaking Bad</h1>
+          <h1 className="poster">Death Note</h1>
+          <h1 className="poster">Game of Thrones</h1>
+          <h1 className="poster">The Walking Dead</h1>
+          <h1 className="poster">The Wire</h1>
+        </div>
 
         
       </div>
