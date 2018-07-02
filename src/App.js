@@ -14,23 +14,29 @@ class App extends Component {
         <div className="container">
           <div className="item" >
             <img src={BlackMirror} alt="Black Mirror"/>
+            <div className="title"><h2>Black Mirror</h2></div>
           </div>
           <div className="item" >
             <img src={BreakingBad} alt="Breaking Bad"/>
+            <div className="title"><h2>Breaking Bad</h2></div>
           </div>
           <div className="item" >
             <img src={DeathNote} alt="Death Note"/>
+            <div className="title"><h2>Death Note</h2></div>
           </div>
         </div>
         <div className="container">
           <div className="item" >
-          <img src={GoT} alt="Game of Thrones"/>
+            <img src={GoT} alt="Game of Thrones"/>
+            <div className="title"><h2>Game Of Thrones</h2></div>
           </div>
           <div className="item" >
-          <img src={FearTheWalkingDead} alt="Fear the Walking Dead"/>
+            <img src={FearTheWalkingDead} alt="Fear the Walking Dead"/>
+            <div className="title"><h2>Fear The Walking Dead</h2></div>
           </div>
           <div className="item" >
-          <img src={TheWire} alt="The Wire"/>
+            <img src={TheWire} alt="The Wire"/>
+            <div className="title"><h2>The Wire</h2></div>
           </div>
         </div>  
       </div>
