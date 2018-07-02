@@ -24,12 +24,6 @@
 
 .container {
   display: flex;
-  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
-.poster {
-  justify-content: center;
-  margin: 30px;
-  width: 33%;
-  flex: 1;
-}

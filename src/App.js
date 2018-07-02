@@ -10,6 +10,8 @@ class App extends Component {
           <h1 className="poster">Black Mirror</h1>
           <h1 className="poster">Breaking Bad</h1>
           <h1 className="poster">Death Note</h1>
+        </div>
+        <div className="container">
           <h1 className="poster">Game of Thrones</h1>
           <h1 className="poster">The Walking Dead</h1>
           <h1 className="poster">The Wire</h1>
