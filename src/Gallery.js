@@ -8,7 +8,7 @@ import MovieItem from './Routes/MovieItem';
 import React from 'react';
 
 const Gallery = () => {
-    return (
+    return ( 
       <div>
         <div className="container">
           <MovieItem src={BlackMirror} alt='Black Mirror' />

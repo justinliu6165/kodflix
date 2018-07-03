@@ -9,7 +9,7 @@ const MovieItem = (props) => {
         <div className="title"><h2>{props.alt}</h2></div>
       </Link>
     )
-  }
+  } 
 
 
 export default MovieItem;
