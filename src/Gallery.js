@@ -11,14 +11,14 @@ const Gallery = () => {
     return ( 
       <div>
         <div className="container">
-          <MovieItem src={BlackMirror} alt='Black Mirror' />
-          <MovieItem src={BreakingBad} alt='Breaking Bad' />
-          <MovieItem src={DeathNote} alt='Death Note' />
+          <MovieItem id='black-mirror' src={BlackMirror} alt='Black Mirror'/>
+          <MovieItem id='breaking-bad' src={BreakingBad} alt='Breaking Bad' />
+          <MovieItem id='death-note' src={DeathNote} alt='Death Note' />
         </div>
         <div className="container">
-          <MovieItem src={FearTheWalkingDead} alt='Fear The Walking Dead' />
-          <MovieItem src={GoT} alt='Game Of Thrones' />
-          <MovieItem src={TheWire} alt='The Wire' />
+          <MovieItem id='fear-the-walking-dead' src={FearTheWalkingDead} alt='Fear The Walking Dead' />
+          <MovieItem id='game-of-thrones' src={GoT} alt='Game Of Thrones' />
+          <MovieItem id='the-wire' src={TheWire} alt='The Wire' />
         </div>
       </div>
     )
