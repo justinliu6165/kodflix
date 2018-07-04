@@ -5,9 +5,6 @@ import FearTheWalkingDead from '../Images/FearTheWalkingDead.jpg';
 import GoT from '../Images/GoT.jpg';
 import TheWire from '../Images/TheWire.jpg';
 
-
-
-
 let TVShows = [
     {
         id: 'black-mirror',
