@@ -1,6 +1,15 @@
+body {
+  background-color:black;
+}
+
 .container{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  /* display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto; */
+  /*Create different grid-columns for different sized screens @media only screen and ...*/
  } 
  
 img {
@@ -9,7 +18,7 @@ img {
 }
 
 .item {
-  flex: 1;
+  flex: 1 1 400px;
   position: relative;
 }
  
