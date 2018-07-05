@@ -22,7 +22,7 @@ class Details extends Component {
     render() {
         
         return (
-            <div id="details">
+            <div className="details">
                 <h2>{this.state.message}</h2>
                 <Link to="/" id="homeBtn">Home</Link>
             </div>
