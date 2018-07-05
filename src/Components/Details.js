@@ -1,34 +1,30 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import './Details.css';
 
 class Details extends Component {
-    state = {
-        message: 'Hello, this will be the details page for each Movie and TV show :)'
+    constructor() {
+        super()
+        this.state = {
+            message: 'Hello, this will be the details page for each Movie & TV show :)'
+        }
     }
 
-    componentDidMount(){
-        setTimeout(
-            function() {
-                this.setState({message: 'Coming Soon!'});
-            }
-            .bind(this),
+
+
+    componentDidMount() {
+        setTimeout(() => this.setState({ message: 'Coming Soon :)!' }),
             3000
         );
     }
 
 
     render() {
-        const style = {
-            color: 'yellow',
-            margin: '0 auto',
-            width: '50%',
-            textAlign: 'center'
-        }
-
+        
         return (
-            <div style={style}>
-                <h2 onClick={this.TimeIntervalHandler}>{this.state.message}</h2><br/>
-                <Link to="/">Home</Link>
+            <div className="details">
+                <h2>{this.state.message}</h2>
+                <Link to="/" id="homeBtn">Home</Link>
             </div>
         );
     }

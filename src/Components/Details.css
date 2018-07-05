@@ -1,0 +1,25 @@
+#details {
+    color: white;
+    font-size: 15px;
+    margin: 0 auto;
+    width: 400px;
+    height: 150px;
+    text-align: center;
+    border: 1px solid white;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+.homeBtn {
+    border: 1px solid white;
+    background: #ffffff;
+    padding: 9px;
+    color: black;
+    border-radius: 4px;
+    text-decoration-line: none;
+}
+
+#homeBtn:hover {
+    background: rgb(58, 56, 56);
+    color: white;
+}
