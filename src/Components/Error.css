@@ -1,0 +1,14 @@
+.errorMessage {
+    color: white;
+    margin: 40px auto;
+    text-align: center;
+}
+
+homeBtn{
+    border: 1px solid white;
+    background: #ffffff;
+    padding: 9px;
+    color: black;
+    border-radius: 4px;
+    text-decoration: none;
+}
