@@ -16,19 +16,18 @@ class Details extends Component {
     componentDidMount() {
         let iD = this.props.match.params.id;
         let show = TVShows.find((show) => show.id === iD);
-        this.setState({ message: show.alt })
-        // if (!show) {
-        //     this.setState({ redirect: true });
-        // } else {
-        //     this.setState({ message: show.alt });
-        // }
+        if (!show) {
+            this.setState({ redirect: true });
+        } else {
+            this.setState({ message: show.alt });
+        }
     }
 
     render() {
 
-        // if (this.state.redirect) {
-        //     return <Redirect to="/not-found" />
-        // }
+        if (this.state.redirect) {
+            return <Redirect to="/not-found" />
+        }
 
         return (
             <div className="details">

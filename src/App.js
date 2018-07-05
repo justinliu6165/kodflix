@@ -16,7 +16,7 @@ class App extends Component {
           <div>
             <Switch>
               <Route exact={true} path="/" component={Gallery} />
-              {/* <Route path='/not-found' component={ErrorMessage}/> */}
+              <Route path='/not-found' component={ErrorMessage}/>
               <Route path="/:id" component={Details} />
             </Switch>
           </div>
