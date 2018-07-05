@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import './Details.css';
 
 class Details extends Component {
     constructor() {
@@ -19,17 +20,11 @@ class Details extends Component {
 
 
     render() {
-        const style = {
-            color: 'orange',
-            margin: '0 auto',
-            width: '50%',
-            textAlign: 'center'
-        }
-
+        
         return (
-            <div style={style}>
+            <div id="details">
                 <h2>{this.state.message}</h2>
-                <Link to="/">Home</Link>
+                <Link to="/" id="homeBtn">Home</Link>
             </div>
         );
     }
