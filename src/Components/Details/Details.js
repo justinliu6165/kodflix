@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from "react-router-dom";
 import './Details.css';
-import TVShows from './gallery-get';
+import TVShows from '../gallery-get';
 
 class Details extends Component {
     constructor() {
@@ -14,16 +14,17 @@ class Details extends Component {
         }
     }
 
-
     componentDidMount() {
         let iD = this.props.match.params.id;
         let show = TVShows.find((show) => show.id === iD);
         if (!show) {
             this.setState({ redirect: true });
         } else {
-            this.setState({ title: show.alt });
-            this.setState({ showDescription: show.description });
-            this.setState({ image: show.src });
+            this.setState({ 
+                title: show.alt, 
+                showDescription: show.description, 
+                image: show.src
+            });
         }
     }
 
@@ -32,7 +33,6 @@ class Details extends Component {
         if (this.state.redirect) {
             return <Redirect to="/not-found" />
         }
-
 
         return (
             <div className="synopsis-container">

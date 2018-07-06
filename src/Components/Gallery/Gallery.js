@@ -1,6 +1,6 @@
 import Cover from './MovieItem';
 import React from 'react';
-import TVShows from './gallery-get';
+import TVShows from '../gallery-get';
 
 export default function Gallery() {
   return (
