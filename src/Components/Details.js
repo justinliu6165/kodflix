@@ -7,8 +7,10 @@ class Details extends Component {
     constructor() {
         super()
         this.state = {
-            message: '',
-            redirect: false
+            title: '',
+            redirect: false,
+            showDescription: '',
+            image: ''
         }
     }
 
@@ -19,7 +21,9 @@ class Details extends Component {
         if (!show) {
             this.setState({ redirect: true });
         } else {
-            this.setState({ message: show.alt });
+            this.setState({ title: show.alt });
+            this.setState({ showDescription: show.description });
+            this.setState({ image: show.src });
         }
     }
 
@@ -29,10 +33,24 @@ class Details extends Component {
             return <Redirect to="/not-found" />
         }
 
+
         return (
-            <div className="details">
-                <h2>{this.state.message}</h2>
-                <Link to="/" id="homeBtn">Home</Link>
+            <div className="synopsis-container">
+                <div className="synopsis-title">
+                    {this.state.title}
+                    <hr/>
+                </div>
+                <div className="profile">
+                    <div className="description">
+                        {this.state.showDescription}
+                    </div>
+                    <div className="synopsis-image">
+                        <img src={this.state.image} alt={this.state.title} />
+                    </div>
+                </div>
+                <div id="homeBtn">
+                    <Link to="/" ><h2 className="home">Home</h2></Link>
+                </div>
             </div>
         );
     }

@@ -1,28 +1,91 @@
-.details {
-    color: black;
-    font-size: 15px;
-    margin: 0 auto;
-    width: 400px;
-    height: 150px;
-    text-align: center;
-    border: 1px solid white;
-    padding: 10px;
-    margin-top: 100px;
-    border-radius: 2%;
-    background-color: white;
+.synopsis-container {
+    width: 75%;
+    margin: 30px auto;
 }
 
-.homeBtn {
-    border: 1px solid white;
-    background: #ffffff;
-    padding: 9px;
+.synopsis-title {
+    background: inherit;
+    color: white;
+    font-weight: 700;
+    margin: 0 auto;
+    font-size: 50px;
+    text-align: center;
+    padding: 30px;
+}
+
+hr {
+    margin: 5px;
+}
+
+.profile { 
+    color: white;
+    display: flex;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    font-weight: bold;
+}
+
+.description{
+    flex: 4;
+    padding: 30px;
+    font-size: 30px;
+}
+
+
+.synopsis-image{
+    flex: 5;
+}
+
+.synopsis-image img{
+    border-radius: 10px;
+    min-width: 250px;
+}
+
+@media only screen and (max-width: 600px){
+    .synopsis-container {
+        width: 85%;
+        margin: 10px auto;
+    }
+    
+    .synopsis-title {
+        padding: 5px;
+        font-size:37px;
+    }
+    .profile{
+        display: block;
+    }
+    .description{
+        padding: 10px;
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px){
+    .description{
+        font-size: 25px;
+    }
+}
+
+#homeBtn {
+    margin: 10px auto;
+    width: 100px;
+    background-color: white;
+    text-align: center;
+    border-radius: 3px;
+}
+
+#homeBtn a {
     color: black;
-    border-radius: 4px;
     text-decoration: none;
 }
 
 
 #homeBtn:hover {
-    background: rgb(58, 56, 56);
+    background: gray; 
+}
+
+#homeBtn:hover a{
     color: white;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-const MovieItem = (props) => {
+const Cover = (props) => {
   return (
     <Link className="item" to={props.id}>
       <img src={props.src} alt={props.alt} />
@@ -11,4 +11,4 @@ const MovieItem = (props) => {
 }
 
 
-export default MovieItem;
+export default Cover;
