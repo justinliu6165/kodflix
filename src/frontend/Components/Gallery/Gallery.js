@@ -1,30 +1,29 @@
 import Cover from './Covers';
 import React, { Component } from 'react';
-
+import Loading from '../Loading-icon/loading-icon'
 
 class Gallery extends Component {
   constructor() {
     super();
     this.state = {
-      TVShows: []
+      shows: null
     }
   }
 
   componentDidMount() {
     fetch('/rest/shows')
       .then(res => res.json())
-      .then(TVShows => {
-        this.setState({ TVShows });
+      .then(shows => {
+        this.setState({ shows });
       })
   }
 
   render() {
 
-    let shows = this.state.TVShows;
-
+    let shows = this.state.shows;
 
     if (!shows) {
-      return <div>Loading...</div>
+      return <div><Loading/></div>
     }
 
     return (
