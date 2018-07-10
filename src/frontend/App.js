@@ -7,17 +7,6 @@ import ErrorMessage from './Components/Error/Error';
 
 
 class App extends Component {
-  state = {
-    TVShows: []
-  }
-
-  componentDidMount(){
-    fetch('/rest/shows')
-      .then(res => res.json())
-      .then(TVShows => {
-        this.setState({TVShows});
-      })
-  }
 
   render() {
 

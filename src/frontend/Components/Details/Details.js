@@ -1,51 +1,53 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from "react-router-dom";
 import './Details.css';
-import TVShows from '../gallery-get';
 
 class Details extends Component {
     constructor() {
         super()
         this.state = {
-            title: '',
-            redirect: false,
-            showDescription: '',
-            image: ''
+            show: null,
+            redirect: false
         }
     }
 
     componentDidMount() {
-        let iD = this.props.match.params.id;
-        let show = TVShows.find((show) => show.id === iD);
-        if (!show) {
-            this.setState({ redirect: true });
-        } else {
-            this.setState({ 
-                title: show.alt, 
-                showDescription: show.description, 
-                image: show.src
-            });
-        }
+        fetch('/rest/shows')
+            .then(res => res.json())
+            .then(shows => {
+                const iD = this.props.match.params.id;
+                const show = shows.find((show) => show.id === iD);
+                if(show) {
+                    this.setState({ show })
+                } else {
+                    this.setState({redirect: true});
+                }
+            })
     }
 
     render() {
 
-        if (this.state.redirect) {
+        let { show, redirect } = this.state;
+        
+        if (redirect) {
             return <Redirect to="/not-found" />
+        }
+        if (!show) {
+            return <div>Loading...</div>
         }
 
         return (
             <div className="synopsis-container">
                 <div className="synopsis-title">
-                    {this.state.title}
-                    <hr/>
+                    {show.alt}
+                    <hr />
                 </div>
                 <div className="profile">
                     <div className="description">
-                        {this.state.showDescription}
+                        {show.description}
                     </div>
                     <div className="synopsis-image">
-                        <img src={this.state.image} alt={this.state.title} />
+                        <img src={require(`../../Common/Images/${show.id}.jpg`)} alt={show.alt} />
                     </div>
                 </div>
                 <div id="homeBtn">
