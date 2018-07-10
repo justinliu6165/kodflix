@@ -1,6 +1,6 @@
 import Cover from './Covers';
 import React, { Component } from 'react';
-import Loading from '../Loading-icon/loading-icon'
+import Loading from '../LoadingIcon/loadingIcon'
 
 class Gallery extends Component {
   constructor() {
@@ -13,9 +13,7 @@ class Gallery extends Component {
   componentDidMount() {
     fetch('/rest/shows')
       .then(res => res.json())
-      .then(shows => {
-        this.setState({ shows });
-      })
+      .then(shows => this.setState({ shows }))
   }
 
   render() {

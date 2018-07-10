@@ -8,6 +8,5 @@ export default function ErrorMessage() {
             <h2>Ooops, it looks like this page doesn't exist :(</h2>
             <Link to="/" id="homeBtn">Home</Link>
         </div>
-        
     )
 };
