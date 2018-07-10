@@ -3,6 +3,7 @@ const app = express();
 const TvShows = require('./listOfShows')
 const path = require('path');
 const port = process.env.PORT || 3001;
+const db = require('./db');
 
 app.get('/rest/shows', (req, res) => {
     res.send(TvShows);
