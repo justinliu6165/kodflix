@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from "react-router-dom";
 import './Details.css';
+import Loading from '../LoadingIcon/LoadingIcon'
 
 class Details extends Component {
     constructor() {
@@ -33,7 +34,7 @@ class Details extends Component {
             return <Redirect to="/not-found" />
         }
         if (!show) {
-            return <div>Loading...</div>
+            return <div><Loading/></div>
         }
 
         return (
