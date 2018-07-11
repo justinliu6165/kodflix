@@ -1,12 +1,17 @@
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
+const MongoClient = require('mongodb').MongoClient;
+const url = "mongodb://kodflix:kodflix@127.0.0.1:27017/kodflix";
 
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("kodflix");
-  dbo.collection("shows").find({}).toArray(function(err, result) {
-    if (err) throw err;
-    console.log(result);
-    db.close();
+function connect() {
+  return new Promise((resolve, reject) => { 
+    MongoClient.connect(url,{useNewUrlParser: true }, function (err, db) {
+      if (err) reject (err);
+      var dbo = db.db('kodflix');
+      resolve(dbo)
+    }); 
   });
-});
+}
+
+module.exports = connect;
+
+
+
