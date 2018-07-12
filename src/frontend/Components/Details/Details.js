@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from "react-router-dom";
 import './Details.css';
-import Loading from '../LoadingIcon/LoadingIcon';
+import Loading from '../LoadingIcon/LoadingIcon.js'
 
 class Details extends Component {
     constructor() {
