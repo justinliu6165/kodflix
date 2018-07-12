@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 require('dotenv').config();
-const databaseUrl = process.env[`DB_URL_${process.env.NODE_ENV}`];
+const databaseUrl = process.env[`DB_URL_${process.env.NODE_ENV}`] || process.env.DB_URL_PRD;
 const databaseName = databaseUrl.substr(databaseUrl.lastIndexOf('kodflix'));
 //const url = "mongodb://kodflix:kodflix@localhost:27017/kodflix";
 //process.env.NODE_ENV will be either 'PRD' or 'DEV'
