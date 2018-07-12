@@ -1,6 +1,6 @@
 import Cover from './Covers';
 import React, { Component } from 'react';
-import Loading from '../LoadingIcon/LoadingIcon.js'
+import Loading from '../LoadingIcon/LoadingIcon'
 
 class Gallery extends Component {
   constructor() {
