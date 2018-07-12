@@ -29,7 +29,6 @@ class Gallery extends Component {
         {shows.map(show => <Cover key={show.id} id={show.id} src={show.src} alt={show.alt} />
         )}
       </div>
-
     )
   }
 }
