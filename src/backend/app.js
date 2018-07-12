@@ -5,15 +5,12 @@ const port = process.env.PORT || 3001;
 const connect = require('./db');
 
 connect().then(dbo => {
-
     app.get('/rest/shows', (req, res) => {
-
         dbo.collection('shows').find({}).toArray(function (err, result) {
             if (err) throw (err);
-            console.log(result);
             res.send(result)
         })
-    })
+    }) 
 
     app.use(express.static(path.join(__dirname, '../../build')));
     app.get('*', function (req, res) {
