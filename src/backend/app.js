@@ -16,7 +16,6 @@ connect().then(dbo => {
         const iD = req.params.id;
         dbo.collection('shows').findOne({id: iD},{},function (err, result) {
             if (err) throw (err);
-            console.log(result)
             res.send(result)
         })
     })
