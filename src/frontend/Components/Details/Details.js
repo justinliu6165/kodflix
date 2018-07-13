@@ -13,11 +13,9 @@ class Details extends Component {
     }
 
     componentDidMount() {
-        fetch('/rest/shows')
+        fetch(`/${this.props.match.params.id}`)
             .then(res => res.json())
-            .then(shows => {
-                const iD = this.props.match.params.id;
-                const show = shows.find((show) => show.id === iD);
+            .then(show => {
                 if(show) {
                     this.setState({ show })
                 } else {
