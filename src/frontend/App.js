@@ -5,7 +5,6 @@ import Details from './Components/Details/Details.js';
 import Gallery from './Components/Gallery/Gallery.js';
 import ErrorMessage from './Components/Error/Error.js';
 import ReactGA from 'react-ga';
-// const history = createHistory();
 
 
 class App extends Component {
@@ -14,16 +13,6 @@ class App extends Component {
     ReactGA.initialize('UA-122233837-1');
     this.trackViewPage(location)
     history.listen((location)=>this.trackViewPage(location))
-
-    // history.listen((location, action)=>{
-    //   console.log(`The current URL is ${location.pathname}${location.search}${location.hash}`)
-    //   console.log(`The last navigation is ${action}`)
-    // })
-    // history.listen((location, action) => {
-    //  
-    //   
-    // });
-
   }
 
   trackViewPage(location){
