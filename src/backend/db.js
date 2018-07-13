@@ -7,7 +7,6 @@ const databaseName = databaseUrl.substr(databaseUrl.lastIndexOf('kodflix'));
 //process.env.DB_URL_DEV or process.env.DB_URL_PRD
 //process.env[`DB_URL_${process.env.NODE_ENV}`]
 function connect() {
-  console.log(databaseUrl)
   return new Promise((resolve, reject) => { 
     MongoClient.connect(databaseUrl,{ useNewUrlParser: true }, function (err, db) {
       if (err) reject (err);
