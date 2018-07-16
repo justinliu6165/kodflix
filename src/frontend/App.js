@@ -5,6 +5,7 @@ import Details from './Components/Details/Details.js';
 import Gallery from './Components/Gallery/Gallery.js';
 import ErrorMessage from './Components/Error/Error.js';
 import ReactGA from 'react-ga';
+import Menu from './Components/Menu/Menu.js';
 
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
       
     return (
       <div className="App">
+      <Menu/>
         <Switch>
           <Route exact={true} path="/" component={Gallery} />
           <Route path='/not-found' component={ErrorMessage} />

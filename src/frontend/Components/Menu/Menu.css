@@ -1,0 +1,52 @@
+.menu-button{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0px;
+    animation: menu 2s ease-out;
+}
+
+.btn{
+    background-color: inherit;
+    z-index: 200;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 50px;
+    cursor: pointer;
+    width: 50px;
+    transition: all .3s ease-in-out;
+}
+
+@keyframes menu {
+    from {top:-100px}
+    to {top: 0px}
+}
+
+svg:hover{
+    fill: white;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+    .btn{
+        height: 40px;
+        left: 15px;
+    }
+    .btn:hover{
+        transform: scale(1.1);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .btn{
+        height: 30px;
+        left: 10px;
+    }
+    .btn:hover{
+        transform: scale(1.1);
+    }
+}
