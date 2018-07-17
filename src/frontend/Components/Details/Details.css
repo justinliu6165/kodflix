@@ -52,7 +52,7 @@ hr {
     
     .synopsis-title {
         padding: 5px;
-        font-size:37px;
+        font-size:30px;
     }
     .profile{
         display: block;
@@ -68,6 +68,9 @@ hr {
 @media only screen and (min-width: 600px) and (max-width: 800px){
     .description{
         font-size: 25px;
+    }
+    .synopsis-title {
+        font-size:28px;
     }
 }
 

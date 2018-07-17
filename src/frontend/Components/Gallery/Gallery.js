@@ -14,7 +14,7 @@ class Gallery extends Component {
     fetch('/rest/shows')
       .then(res => res.json())
       .then(shows => this.setState({ shows }))
-  }
+  } 
 
   render() {
 

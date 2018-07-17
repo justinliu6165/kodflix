@@ -1,5 +1,15 @@
-body {
-  background-color:#27272c;
+*{
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color:#1c1c1f;
+  height: 100%;
+  overflow: auto;
+}
+
+.App{
+  height: 100%;
 }
 
 .container{
