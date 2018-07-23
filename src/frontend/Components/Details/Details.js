@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from "react-router-dom";
 import './Details.css';
-import Loading from '../LoadingIcon/Loading.js';
+import Loading from '../Icons/LoadingIcon/Loading.js';
 
 class Details extends Component {
     constructor() {
@@ -13,8 +13,9 @@ class Details extends Component {
     }
 
     componentDidMount() {
-        fetch(`/${this.props.match.params.id}`)
-            .then(res => res.json())
+        let id = this.props.match.params.id
+        fetch(`/rest/shows/${id}`)
+            .then(res => res.status === 404 ? null : res.json())
             .then(show => {
                 if(show) {
                     this.setState({ show })

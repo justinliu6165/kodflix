@@ -5,17 +5,19 @@
     left: -30%;
     height: 100%;
     background: rgba(0,0,0,0.9);
-    z-index: 5;
+    z-index: 2;
     width: 30%;
+    display: flex;
+    flex-direction: column;
 }
  
 .menu.toggle-menu{
     left: 0;
 }
 
-svg.btn{
+svg.btn {
     background-color:rgba(0,0,0,0.5);
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     top: 20px;
     left: 20px;
@@ -31,16 +33,6 @@ svg:hover{
     transform: scale(1.1);
 }
 
-.options{
-    color:white;
-    position: relative;
-    width: 100%;
-    padding: 5px 15px;
-    top: 80px;
-    font-size: 20px;
-    font-weight: 700;
-}
-
 .overlay{
     height: 100%;
     width: 100%;
@@ -48,12 +40,16 @@ svg:hover{
     top:0;
     left: 0;
     background: rgba(0,0,0,0.7);
-    z-index: 2  ;
+    z-index: 1;
     transition: all 1.5s ease;
 }
 
 @media only screen and (max-width: 600px) {
-    .btn{
+    .menu{
+        left: -40%;
+        width: 40%;
+    }
+    svg.btn{
         height: 30px;
         left: 15px;
     }
@@ -61,21 +57,22 @@ svg:hover{
         transform: scale(1.1);
         fill:white;
     }
-    .toggle-menu{
-        width: 50%;
-    }
 }
 
 @media only screen and (max-width: 400px) {
-    .btn{
+    .menu{
+        left: -50%;
+        width: 50%;
+    }
+    svg.btn{
         height: 25px;
-        left: 10px;
+        width: 30px;
+        left: 8px;
+        padding: 2px;
+        border-radius: 5px;
     }
     svg:hover{
         transform: scale(1.1);
         fill: white;
-    }
-    .toggle-menu{
-        width: 50%;
     }
 }

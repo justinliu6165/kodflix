@@ -1,0 +1,39 @@
+.options{
+    color:white;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    top: 100px;
+    background: inherit;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.options svg{
+    flex: 1;
+    fill: white;
+    padding: 10px;
+}
+
+.options svg:hover{
+    transform: none;
+}
+
+.options p{
+    flex: 4;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0;
+    margin: 20px auto;
+}
+
+.options:hover{
+    background: rgb(95, 95, 95);
+}
+
+@media only screen and (max-width: 400px) {
+    .options svg{
+        padding: 10px;
+    }
+}

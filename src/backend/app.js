@@ -12,11 +12,15 @@ connect().then(dbo => {
         })
     }) 
 
-    app.get('/:id', (req,res) => {
+    app.get('/rest/shows/:id', (req,res) => {
         const iD = req.params.id;
         dbo.collection('shows').findOne({id: iD},{},function (err, result) {
             if (err) throw (err);
-            res.send(result)
+            if(!result){
+                res.status(404).send({});
+            } else {
+               res.send(result)
+            }
         })
     })
 

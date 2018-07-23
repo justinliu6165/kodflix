@@ -1,10 +1,10 @@
 .errorMessage {
-    color: white;
+    color: rgb(255, 255, 255);
     margin: 40px auto;
     text-align: center;
 }
 
-homeBtn{
+.homeBtn{
     border: 1px solid white;
     background: #ffffff;
     padding: 9px;
