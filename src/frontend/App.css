@@ -1,11 +1,15 @@
 *{
   box-sizing: border-box;
 }
+#root{
+  height: 100%;
+}
 
 html, body {
   background-color:#1c1c1f;
   height: 100%;
   overflow: auto;
+  font-family: "RooneySans-Regular", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", sans-serif;
 }
 
 .App{
@@ -16,10 +20,6 @@ html, body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  /* display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: auto; */
-  /*Create different grid-columns for different sized screens @media only screen and ...*/
  } 
  
 img {
@@ -32,17 +32,6 @@ img {
   position: relative;
 }
  
-/* @media only screen and (max-width: 600px){
-  .container{
-   display: block;
-  } 
-
-  img {
-     width: 100%;
-     height: 100%;
-  }
-} */
-
 .title {
     height: 0;
     opacity: 0;

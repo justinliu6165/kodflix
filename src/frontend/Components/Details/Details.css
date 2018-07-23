@@ -1,97 +1,91 @@
 .synopsis-container {
-    width: 75%;
-    margin: 30px auto;
+    width: 100%;
+    height: 100vh;
+    margin: 0px auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
-.synopsis-title {
-    background: inherit;
-    color: white;
+.synopsis-container::before {
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+    left: 0;
+	background-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0.31),rgba(0,0,0,0));
+  }
+
+  .synopsis-title {
+    position: relative;
+    background: transparent;
+    color: rgb(238, 238, 238);
     font-weight: 700;
     margin: 0 auto;
-    font-size: 50px;
+    font-size: 3rem;
     text-align: center;
-    padding: 30px;
+    padding-top: 20px;
 }
 
-hr {
-    margin: 5px;
-}
-
-.profile { 
-    color: white;
-    display: flex;
-    width: 100%;
-    height: 80%;
-    display: flex;
-    font-weight: bold;
+hr{
+    width: 78%;
+    border: none;
+    box-shadow: 0 10px 10px -10px rgb(54, 54, 54);
+    height: 30px;
+    margin: -20px auto 0px; 
+    margin-top: 0;
+    border-bottom: 1px solid rgba(248, 248, 248, 0.9);
 }
 
 .description{
-    flex: 4;
     padding: 30px;
-    font-size: 26px;
+    font-size: 1.1em;
+    position: relative;
+    margin: 20px auto;
+    color: rgb(238, 238, 238);
+    width: 60%;
+    height: 80%;
+    font-weight: bold;
+    text-align: left;
 }
 
-
-.synopsis-image{
-    flex: 5;
-}
-
-.synopsis-image img{
-    border-radius: 10px;
-    min-width: 250px;
-    width: 100%;
-    height: auto;
+.production-crew-info{
+    margin-top: 30px;
+    font-size: 0.8em;
+    font-weight: 400;
+    line-height: 1.7em;
+    text-align: left;
 }
 
 @media only screen and (max-width: 600px){
     .synopsis-container {
-        width: 85%;
+        width: 100%;
         margin: 10px auto;
+        display: block;
     }
     
     .synopsis-title {
         padding: 5px;
         font-size:30px;
     }
-    .profile{
-        display: block;
-    }
     .description{
         padding: 10px;
-        font-size: 15px;
-        text-align: center;
-        font-weight: 1000;
+        font-size: 0.9em;
+        text-align: left;
+        font-weight: 800;
+        width: 80%;
     }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 800px){
     .description{
-        font-size: 25px;
+        font-size: 0.9em;
+        width: 80%;
     }
     .synopsis-title {
         font-size:28px;
     }
 }
 
-#homeBtn {
-    margin: 10px auto;
-    width: 100px;
-    background-color: white;
-    text-align: center;
-    border-radius: 3px;
-}
-
-#homeBtn a {
-    color: black;
-    text-decoration: none;
-}
-
-
-#homeBtn:hover {
-    background: gray; 
-}
-
-#homeBtn:hover a{
-    color: white;
-}

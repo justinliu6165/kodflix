@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import './Details.css';
 import Loading from '../Icons/LoadingIcon/Loading.js';
 
@@ -17,10 +17,10 @@ class Details extends Component {
         fetch(`/rest/shows/${id}`)
             .then(res => res.status === 404 ? null : res.json())
             .then(show => {
-                if(show) {
+                if (show) {
                     this.setState({ show })
                 } else {
-                    this.setState({redirect: true});
+                    this.setState({ redirect: true });
                 }
             })
     }
@@ -28,30 +28,33 @@ class Details extends Component {
     render() {
 
         let { show, redirect } = this.state;
-        
+
         if (redirect) {
             return <Redirect to="/not-found" />
         }
         if (!show) {
-            return <div><Loading/></div>
+            return <div><Loading /></div>
         }
 
+        let imageUrl = require(`../../Common/Images/BackgroundImages/${show.id}-background.jpg`)
+
         return (
-            <div className="synopsis-container">
+            <div
+                className="synopsis-container"
+                style={{ backgroundImage: `url(${imageUrl})` }}>
                 <div className="synopsis-title">
                     {show.alt}
-                    <hr />
                 </div>
-                <div className="profile">
-                    <div className="description">
-                        {show.description}
+                <hr />
+                <div className="description">
+                    <div>{show.description}</div>
+                    <div className="production-crew-info">
+                        {show.creator.length === 1 ?
+                            `Creator: ${show.creator[0]}` :
+                            `Creators: ${show.creator
+                                .join(', ')}`}
+                        <div>Stars: {show.stars.join(', ')}</div>
                     </div>
-                    <div className="synopsis-image">
-                        <img src={require(`../../Common/Images/${show.id}.jpg`)} alt={show.alt} />
-                    </div>
-                </div>
-                <div id="homeBtn">
-                    <Link to="/" ><h2 className="home">Home</h2></Link>
                 </div>
             </div>
         );
