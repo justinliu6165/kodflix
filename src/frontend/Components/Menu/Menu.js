@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './Menu.css';
 import ManageTvIcon from '../Icons/ManageTvIcon/ManageTvIcon.js';
-import MenuOption from './MenuOption.js'
+import MenuOption from './MenuOption.js';
+import MenuHomeIcon from '../Icons/MenuHomeIcon/MenuHomeIcon.js';
 
 
 export default class Menu extends Component {
@@ -27,7 +28,12 @@ export default class Menu extends Component {
                 ].join(' ')}>
                     <MenuOption
                         changeMenuDisplay={this.menuDropdown}
-                        option='Manage TV Shows'
+                        text='Home'
+                        svg={<MenuHomeIcon />}
+                        link="/" />
+                    <MenuOption
+                        changeMenuDisplay={this.menuDropdown}
+                        text='Manage TV Shows'
                         svg={<ManageTvIcon />}
                         link="/manage/tv-shows" />
                 </div >

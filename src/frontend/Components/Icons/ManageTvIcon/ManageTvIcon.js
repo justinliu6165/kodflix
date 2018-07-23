@@ -1,5 +1,4 @@
 import React from 'react';
-import './ManageTvIcon.css'
 
 export default function ManageTvIcon() {
     return (

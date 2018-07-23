@@ -6,7 +6,7 @@ export default function MenuOption(props) {
     return (
         <Link className="options" to={props.link} onClick={props.changeMenuDisplay}>
             {props.svg}
-            <p>{props.option}</p>
+            <p>{props.text}</p>
         </Link>
     )
 }
