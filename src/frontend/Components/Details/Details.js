@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import './Details.css';
 import Loading from '../Icons/LoadingIcon/Loading.js';
+import PlayBtn from '../Icons/PlayIcon/PlayIcon.js';
 
-class Details extends Component {
+export default class Details extends Component {
     constructor() {
         super()
         this.state = {
@@ -55,10 +56,9 @@ class Details extends Component {
                                 .join(', ')}`}
                         <div>Stars: {show.stars.join(', ')}</div>
                     </div>
+                    <Link to={`/${show.id}/play`}><PlayBtn/></Link>
                 </div>
             </div>
         );
     }
 }
-
-export default Details;

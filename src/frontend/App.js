@@ -5,8 +5,9 @@ import Gallery from './Components/Gallery/Gallery.js';
 import ErrorMessage from './Components/Error/Error.js';
 import Menu from './Components/Menu/Menu.js';
 import ManageTvShows from './Components/ManageTvShows/ManageTvShows.js';
-import ReactGA from 'react-ga';
+import PlayVideo from '../frontend/Components/PlayVideo/PlayVideo.js';
 import { Route, Switch, withRouter } from "react-router-dom";
+import ReactGA from 'react-ga';
 
 class App extends Component {
   constructor({ history, location }) {
@@ -32,6 +33,7 @@ class App extends Component {
           <Route path='/not-found' component={ErrorMessage} />
           <Route path='/manage/tv-shows' component={ManageTvShows}/>
           <Route exact path="/:id" component={Details} />
+          <Route path="/:showId/play" component={PlayVideo}/>
         </Switch>
       </div>
     );
