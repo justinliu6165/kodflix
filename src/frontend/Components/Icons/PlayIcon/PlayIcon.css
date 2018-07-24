@@ -1,0 +1,27 @@
+.playBtn.play {
+    background: transparent;
+    width: 60px;
+    height: 60px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-width: 40px 0px 40px 66px;
+    border-color: transparent transparent transparent rgb(184, 8, 8);
+    position: relative;
+    top: 50px;
+    left: 45%;
+    transition: all 0.2s;
+}
+
+.playBtn.play:hover{
+    border-color: transparent transparent transparent rgb(236, 12, 12);
+    transform: scale(1.1);
+    cursor: pointer;
+}   
+
+button:focus {outline:0;}
+
+@media only screen and (max-width: 400px){
+    .playBtn.play{
+        left: 40%;
+    }
+}
