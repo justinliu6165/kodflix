@@ -3,6 +3,8 @@ import './PlayIcon.css';
 
 export default function PlayIcon() {
     return (
-            <button className="playBtn play"></button>
+            <div className="playBtnCircle">
+                <button className="playBtn play"></button>
+            </div>
     )
 }

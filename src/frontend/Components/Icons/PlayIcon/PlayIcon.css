@@ -1,24 +1,42 @@
 .playBtn.play {
     background: transparent;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-style: solid;
     box-sizing: border-box;
-    border-width: 40px 0px 40px 66px;
-    border-color: transparent transparent transparent rgb(184, 8, 8);
+    border-width: 22px 0px 22px 40px;
+    border-color: transparent transparent transparent white;
+    transition: all 0.2s;
+    position: absolute;
+    top: 12px;
+    left: 25px;
+}
+
+.playBtnCircle{
+    width: 90px;
+    height: 80px;
+    background-color: black; 
+    border: 3px solid black;
+    border-radius: 20%;
     position: relative;
-    top: 50px;
-    left: 45%;
+    top: 110px;
+    left: 43%;   
     transition: all 0.2s;
 }
 
-.playBtn.play:hover{
-    border-color: transparent transparent transparent rgb(236, 12, 12);
+.playBtnCircle:hover .playBtn.play{
     transform: scale(1.1);
     cursor: pointer;
-}   
+}
 
-button:focus {outline:0;}
+.playBtnCircle:hover{
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+button:focus{
+    outline:0;
+}
 
 @media only screen and (max-width: 400px){
     .playBtn.play{

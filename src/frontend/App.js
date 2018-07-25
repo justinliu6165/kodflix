@@ -6,6 +6,7 @@ import ErrorMessage from './Components/Error/Error.js';
 import Menu from './Components/Menu/Menu.js';
 import ManageTvShows from './Components/ManageTvShows/ManageTvShows.js';
 import PlayVideo from '../frontend/Components/PlayVideo/PlayVideo.js';
+import AdminShows from '../frontend/Components/AdminShows/AdminShows.js';
 import { Route, Switch, withRouter } from "react-router-dom";
 import ReactGA from 'react-ga';
 
@@ -34,6 +35,7 @@ class App extends Component {
           <Route path='/manage/tv-shows' component={ManageTvShows}/>
           <Route exact path="/:id" component={Details} />
           <Route path="/:showId/play" component={PlayVideo}/>
+          <Route path="/admin/tv-shows" component={AdminShows}/>
         </Switch>
       </div>
     );
