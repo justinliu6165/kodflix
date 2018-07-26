@@ -15,9 +15,9 @@
 .playBtnCircle{
     width: 90px;
     height: 80px;
-    background-color: black; 
-    border: 3px solid black;
-    border-radius: 20%;
+    background-color: red; 
+    border: 3px solid red;
+    border-radius: 30%;
     position: relative;
     top: 110px;
     left: 43%;   
