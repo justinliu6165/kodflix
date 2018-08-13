@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.less';
 import Details from './Components/Details/Details.js';
 import Gallery from './Components/Gallery/Gallery.js';
 import ErrorMessage from './Components/Error/Error.js';

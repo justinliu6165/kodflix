@@ -10,6 +10,7 @@
     "mongodb": "^3.1.1",
     "nodemon": "^1.17.5",
     "react": "^16.4.0",
+    "react-app-rewire-less": "^2.1.2",
     "react-dom": "^16.4.0",
     "react-ga": "^2.5.3",
     "react-router-dom": "^4.3.1",
@@ -17,17 +18,18 @@
   },
   "scripts": {
     "start": "npm-run-all -s build start-backend",
-    "start-frontend": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "start-frontend": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-app-rewired eject",
     "start-backend": "nodemon src/backend/app.js",
     "start-db": "mongod",
     "start-dev": "set NODE_ENV=DEV&& npm-run-all -p start-db start-backend start-frontend "
   },
   "devDependencies": {
     "gradle": "^1.0.9",
-    "npm-run-all": "^4.1.3"
+    "npm-run-all": "^4.1.3",
+    "react-app-rewired": "^1.5.2"
   },
   "proxy": "http://localhost:3001/"
 }
