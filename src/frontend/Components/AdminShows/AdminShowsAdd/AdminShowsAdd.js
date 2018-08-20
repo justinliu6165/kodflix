@@ -25,7 +25,6 @@ export default class AdminShowsAdd extends Component {
             let value = this.state[input];
             data.append(input, this.getFormattedValue(value));
         });
-        //data.append('title', this.getFormattedValue(this.state.title))
         fetch('/rest/show/add', {
             method: "POST",
             body: data
