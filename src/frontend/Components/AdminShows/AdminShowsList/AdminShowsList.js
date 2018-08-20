@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './AdminShowsList.css';
 import Loading from '../../Icons/LoadingIcon/Loading.js';
+import { Link } from "react-router-dom";
 
 export default class AdminShowsList extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             shows: null,
         }
@@ -19,6 +20,8 @@ export default class AdminShowsList extends Component {
     render() {
 
         let { shows } = this.state;
+        let path = this.props.match.path;
+        let urlPath = path.slice(0, path.lastIndexOf('list'))
 
         if (!shows) {
             return <div><Loading /></div>
@@ -27,6 +30,7 @@ export default class AdminShowsList extends Component {
         return (
             <div>
                 <div className="admin-shows-list">List of Shows</div>
+                <Link to={`${urlPath}add`}>Add Shows</Link>
                 {shows.map(show => {
                     return <InfoPanel
                             key={show.id}

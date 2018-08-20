@@ -3,8 +3,14 @@ const app = express();
 const path = require('path');
 const port = process.env.PORT || 3001;
 const connect = require('./db');
+var multer  = require('multer')
+var upload = multer()
 
 connect().then(dbo => {
+    // app.use(bodyParser.json())
+    // app.use(bodyParser.urlencoded({ extended: true }));
+    
+
     app.get('/rest/shows', (req, res) => {
         dbo.collection('shows').find({}).toArray(function (err, result) {
             if (err) throw (err);
@@ -23,6 +29,16 @@ connect().then(dbo => {
             }
         })
     })
+
+    app.post('/rest/show/add', upload.fields([]), function (req, res, next) {
+        console.log(req.body);
+        res.send({});
+      })
+  
+    // app.post('/rest/show/add', (req,res) => {
+    //     console.log(req.body.formData);
+    //     res.send({});
+    // })
 
     app.use(express.static(path.join(__dirname, '../../build')));
     app.get('*', function (req, res) {
