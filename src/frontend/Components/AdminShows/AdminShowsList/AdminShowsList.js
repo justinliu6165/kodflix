@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './AdminShowsList.css';
+import './AdminShowsList.less';
 import Loading from '../../Icons/LoadingIcon/Loading.js';
 import { Link } from "react-router-dom";
 
@@ -30,7 +30,7 @@ export default class AdminShowsList extends Component {
         return (
             <div>
                 <div className="admin-shows-list">List of Shows</div>
-                <Link to={`${urlPath}add`}>Add Shows</Link>
+                <div className="add-show-button"><Link to={`${urlPath}add`}>Add Shows</Link></div>
                 {shows.map(show => {
                     return <InfoPanel
                             key={show.id}
@@ -38,7 +38,8 @@ export default class AdminShowsList extends Component {
                             alt={show.alt}
                             description={show.description}
                             creator={show.creator}
-                            stars={show.stars} />})
+                            stars={show.stars} 
+                            url={urlPath}/>})
                 }
             </div>
         )
@@ -46,6 +47,7 @@ export default class AdminShowsList extends Component {
 }
 
 function InfoPanel(props) {
+
     return (
         <div className="admin-show-panel">
             <div className="admin-panel-image">
@@ -62,6 +64,11 @@ function InfoPanel(props) {
                     <div>Stars: {props.stars.join(', ')}</div>
                 </div>
             </div>
+            <div className="btn-container">
+                <Link to={`${props.url}edit/${props.id}`}>Edit</Link>
+                <Link to={`${props.url}delete`}><button className="edit-btn">Delete</button></Link>  
+            </div>
+
         </div>
     )
 }
