@@ -65,8 +65,8 @@ function InfoPanel(props) {
                 </div>
             </div>
             <div className="btn-container">
-                <Link to={`${props.url}edit/${props.id}`}>Edit</Link>
-                <Link to={`${props.url}delete`}><button className="edit-btn">Delete</button></Link>  
+                <Link to={`${props.url}edit/${props.id}`} className="edit-btn">Edit</Link>
+                <Link to={`${props.url}delete`} className="edit-btn">Delete</Link>  
             </div>
 
         </div>

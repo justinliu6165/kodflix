@@ -15,6 +15,10 @@ export default class AdminShowsAdd extends Component {
         };
     }
 
+    getFormattedValue(value){
+        return typeof value === 'object' ? JSON.stringify(value) : value;
+    }
+
     handleSubmit(event){
         event.preventDefault();
         const data = new FormData();
@@ -29,11 +33,7 @@ export default class AdminShowsAdd extends Component {
           .then((response) => {
               response.json()
             })
-        this.reset();
-    }
-
-    getFormattedValue(value){
-        return typeof value === 'object' ? JSON.stringify(value) : value;
+       this.reset();
     }
 
     reset(){
@@ -48,7 +48,6 @@ export default class AdminShowsAdd extends Component {
     }
 
     onInputChange(name, value){
-        console.log(name, value)
         this.setState(prevState => {
             prevState[name] = value;
             return prevState;
